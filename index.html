@@ -8,12 +8,13 @@
 </head>
 <body>
 	<h1>Scheduling Form</h1>
-	<form action="shippingandbilling.html" method="post">
+	<form id="appointmentform" action="shippingandbilling.html" method="post">
 	<fieldset>
 		<h2>Book Your Appointment Today</h2>
 		<label for="date_input">Date</label><input type="date" id="date_input" name="date"><br>
 		<label for="time_input">Time</label><input type="time" id="time_input" name="time"><br>
 		<label for="timezone_input">Timezone</label><select id="timezone_input" name="timezone">
+			<option value="" disabled selected>Choose A Timezone</option>
 			<option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
 			<option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
 			<option value="-10.0">(GMT -10:00) Hawaii</option>
@@ -48,7 +49,7 @@
 		</select><br>
 		<label for="message_input">Message</label><textarea name="message" id="message_input"></textarea><br>
 		<label for="telephone_input">Telephone</label><input type="tel" id="telephone_input" name="telephone" maxlength="10"><br>
-		<label for="email_input">Email</label><input type="email" name="email"><br>
+		<label for="email_input">Email</label><input type="email" id="email_input" name="email"><br>
 		<input type="submit" value="Submit">
 	</fieldset>
 	</form>
@@ -56,5 +57,7 @@
 		<li><a href="https://brianhernandez.github.io/introduction-to-css__multi-page-web-site/forms.html">Form Projects Homepage</a></li>
 		<li><a href="https://brianhernandez.github.io/introduction-to-css__multi-page-web-site/">Projects Homepage</a></li>
 	</ul>
+	<script type="text/javascript" src="validator.js"></script>
+  <script type="text/javascript" src="scheduling-validate.js"></script>
 </body>
 </html>
